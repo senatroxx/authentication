@@ -8,6 +8,15 @@
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
+                <div class="google-btn mb-4">
+                    <a href="{{ url('google') }}">
+                        <div class="google-icon-wrapper">
+                            <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
+                        </div>
+                        <p class="btn-text">Sign in with google</p>
+                    </a>
+                </div>
+
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -56,9 +65,6 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
-                                <a href="{{ url('google') }}" class="btn btn-primary">
-                                    Login with Google
-                                </a>
 
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">

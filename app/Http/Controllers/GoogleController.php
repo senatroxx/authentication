@@ -31,7 +31,6 @@ class GoogleController extends Controller
                 'name' => $oauthUser->name,
                 'email' => $oauthUser->email,
                 'google_id' => $oauthUser->id,
-                'password' => Hash::make($oauthUser->token),
             ]);
             Auth::login($newUser);
             return redirect('/home');

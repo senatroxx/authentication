@@ -18,6 +18,48 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <style>
+        .google-btn {
+            width: 184px;
+            height: 42px;
+            background-color: #4285f4;
+            border-radius: 2px;
+            box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.25);
+            margin:0 auto;
+            transition: all .3s;
+        }
+        .google-btn .google-icon-wrapper {
+            position: absolute;
+            margin-top: 1px;
+            margin-left: 1px;
+            width: 40px;
+            height: 40px;
+            border-radius: 2px;
+            background-color: #fff;
+        }
+        .google-btn .google-icon {
+            position: absolute;
+            margin-top: 11px;
+            margin-left: 11px;
+            width: 18px;
+            height: 18px;
+        }
+        .google-btn .btn-text {
+            float: right;
+            margin: 11px 11px 0 0;
+            color: #fff;
+            font-size: 14px;
+            letter-spacing: 0.2px;
+        }
+        .google-btn:hover {
+            box-shadow: 0 0 0px rgba(0, 0, 0, 0.25);
+            cursor:pointer;
+        }
+        .google-btn:active {
+            background: #1669f2;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
