@@ -20,5 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('google', 'GoogleController@redirect');
-Route::get('callback/google', 'GoogleController@callback');
+Route::prefix('google')->group(function (){
+    Route::get('/', 'GoogleController@redirect');
+    Route::get('callback', 'GoogleController@callback');
+    Route::get('register', 'GoogleController@register')->name('google.register');
+    Route::post('addUser', 'GoogleController@addUser')->name('google.addUser');
+});
