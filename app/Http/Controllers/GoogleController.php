@@ -52,6 +52,9 @@ class GoogleController extends Controller
             'google_id' => $oauth->id,
             'password' => Hash::make($request['password']),
         ]);
+        
+        $newUser->sendEmailVerificationNotification();
+
         Auth::login($newUser);
 
         session()->forget('oauth');
