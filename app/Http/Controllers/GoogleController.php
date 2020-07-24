@@ -21,7 +21,7 @@ class GoogleController extends Controller
             return redirect('/');
         }
 
-        $oauthUser = Socialite::driver('google')->user();
+        $oauthUser = Socialite::driver('google')->stateless()->user();
         $user = User::where('google_id', $oauthUser->id)->first();
         if ($user) {
             Auth::loginUsingId($user->id);
